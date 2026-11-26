@@ -1,0 +1,40 @@
+# Python / Backend
+backend/venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+backend/smart_surveillance.db
+*.db
+backend/snapshots/
+backend/exports/
+
+# Frontend / Node
+frontend/node_modules/
+node_modules/
+frontend/dist/
+.vite/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Unrelated workspace documents & temporary scripts
+file/
+Computer_Networks_Lab_Manual_First_Pages.pdf
+Computer_Networks_Lab_Manual_With_Marks_Table.pdf
+HARITHA_UG_Thesis_Project_Report.docx
+HARITHA_UG_Thesis_Project_Report.pdf
+Project_H_Report.md
+UG thesis format.pdf
+fix_bonafide.py
+fix_docx_sig.py
+remove_viva.py
+test.html

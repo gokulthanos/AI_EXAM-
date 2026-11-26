@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-ink-950 text-slate-200 antialiased;
+  }
+  ::selection {
+    @apply bg-primary-600/40 text-white;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg border border-line bg-ink-900;
+  }
+  .card-header {
+    @apply flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-3.5;
+  }
+  .card-title {
+    @apply text-sm font-semibold text-slate-200;
+  }
+  .card-body {
+    @apply p-5;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-3.5 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/60 disabled:cursor-not-allowed disabled:opacity-45;
+  }
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-500;
+  }
+  .btn-secondary {
+    @apply btn border border-line bg-ink-750 text-slate-200 hover:bg-ink-700;
+  }
+  .btn-ghost {
+    @apply btn text-slate-400 hover:bg-ink-750 hover:text-slate-100;
+  }
+  .btn-danger {
+    @apply btn bg-danger-600 text-white hover:bg-danger-500;
+  }
+  .btn-success {
+    @apply btn bg-success-600 text-white hover:bg-success-500;
+  }
+  .btn-icon {
+    @apply inline-flex h-8 w-8 items-center justify-center rounded-md border border-line bg-ink-800 text-mute transition-colors hover:bg-ink-700 hover:text-slate-100 disabled:opacity-40;
+  }
+
+  .input {
+    @apply w-full rounded-md border border-line bg-ink-850 px-3 py-2 text-sm text-slate-100 placeholder-slate-600 transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500/60 disabled:opacity-60;
+  }
+  .label {
+    @apply mb-1.5 block text-[11px] font-medium uppercase tracking-wider text-mute;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded border px-2 py-0.5 text-[11px] font-medium leading-5;
+  }
+  .badge-green {
+    @apply badge border-success-500/30 bg-success-500/10 text-success-400;
+  }
+  .badge-red {
+    @apply badge border-danger-500/30 bg-danger-500/10 text-danger-400;
+  }
+  .badge-amber {
+    @apply badge border-warning-500/30 bg-warning-500/10 text-warning-400;
+  }
+  .badge-blue {
+    @apply badge border-primary-500/30 bg-primary-500/10 text-primary-300;
+  }
+  .badge-gray {
+    @apply badge border-line bg-ink-750 text-slate-400;
+  }
+
+  .table {
+    @apply w-full border-collapse text-left text-sm;
+  }
+  .table thead th {
+    @apply whitespace-nowrap border-b border-line bg-ink-850 px-4 py-2.5 text-[11px] font-medium uppercase tracking-wider text-mute;
+  }
+  .table tbody td {
+    @apply border-b border-line/70 px-4 py-3 align-middle text-slate-300;
+  }
+  .table tbody tr:hover {
+    @apply bg-ink-850/70;
+  }
+  .table tbody tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-slate-400 transition-colors hover:bg-ink-800 hover:text-slate-100;
+  }
+  .nav-link-active {
+    @apply bg-primary-600/15 text-primary-300 hover:bg-primary-600/20 hover:text-primary-200;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.ink.600') transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: theme('colors.ink.600');
+    border-radius: 9999px;
+  }
+}
